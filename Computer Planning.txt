@@ -1,0 +1,14 @@
+List of things I want to learn / create (based on priority)
+
+1.) Learn more networking as well as Programming (Mostly Python and Bash scripting)
+  - My reason to learn this is to be more familiar with networking and programming terminology and commands, I also want to
+learn how to create my own scripts and automations.
+
+2.) Finish setting up VMware ESXI
+  - the webui is working however, the VMs still do not have access to the internet, I will need to find a way to solve this
+
+3.) Ethical Hacking
+  - Found a few books and helpful tutorials I want to try out, specifically OfSec material
+
+4.) want to create some sort of personal project (automation or just learning about a specific topic such as malware and how
+it is created)
