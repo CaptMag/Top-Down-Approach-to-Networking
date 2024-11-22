@@ -1,0 +1,86 @@
+Review of Chapter 1 for the book "A Top-Down Approach to Networking"
+
+Internet Basics (1.1)
+---------------------
+
+Network Edge: Clients, Server, Data Centers, End to End Users, Smartphones, Laptops, etc.
+Access Networks and Physical Media: Allows hosts (end systems) to connect to the internet whether it be 1. Residential, 2. Institutional, 3. Mobile, etc.
+Cable-Based Access: A single cable that connects all devices and homes to a cable head end.
+Frequency Division Multiplexing: Different Channels transmitted in different frequency bonds.
+DSL (Digital Subscriber Line): Uses existing telephone lines to central office DSLAM
+
+Links: Physical Media
+---------------------
+
+Bits: Propogates between transmitters / reciever pairs
+Physical Links: lies between transmitters and receivers
+Guided Media: Signal propogate in said media (copper, fiber, coax)
+Unguided Media: Signals propogate Freely (radios)
+
+Netwok Core (1.2 - 1.3)
+-----------------------
+
+Packet Switching: Hosts break application-layer messages into packets
+Network Forward: Packets from one router to the next, across links on path from source to destination
+Forwarding: Packets move from router's input link to output link
+Packet Queing: When there are too many packets, and the excess must wait
+Packet Switching (part 2): Breaks down information into small packets which move independently on the network. Using the headers they gain from moving around, and their specific provided information
+they are then reassembled at the destination.
+Circuit Switching: There are dedicated communication paths (links) that are established between two devices.
+
+Performance (1.4)
+-----------------
+
+Bandwith: Rate at which data is successfully transmitted from one point to another
+Instantaneous: Rate of data transfer at a specific time 
+Average: Average rate of successful data transfer
+
+Latency: Time it takes for data to travel from sender to reciever
+
+Processing Delay: Time taken by routers and switches to process the packet header
+Queuing: Time a packet spends in queue before it can be sent
+Propogation: Time it takes for the packet to propogate through the physical medium (Wired / Wireless) from sender to receiver
+
+Round-Trip Time (RTT): Time it takes for a signal to travel from sender to receiver and back
+Packet Loss: Packets are dropped due to congestion or errors.
+
+Layering and Encapsulation (1.5)
+--------------------------------
+
+Layering: Allows an explicit structure which allows identification and the relationship to other system pieces
+- This also eases matinence and updating systems (one service change won't affect the other services)
+
+Internet Protocol Stack
+-----------------------
+
+Application: Supporting network applications (DNS, HTTP, IMAP, SMTP)
+Transport: Process-process data transfer (from one destination to another). Uses TCP and UDP
+Network: Routing of data grams from source to destination, (IP, Routing Protocols)
+Link: Data transfer between teo similar network devices, (Ethernet, WiFi, PPP (Point to Point Protocol) ).
+Physical: Bits "on the wire"
+
+Encapsulation
+-------------
+
+The process of adding headers to data as it moves down the Internet Protocol Stack. Each layer addes its own header to the data which allows for it to be transmitted and understood successfully.
+
+Networks Under Attack (1.6)
+---------------------------
+
+Packet "Sniffing" 
+- Broadcast Media (Ethernet / Wireless)
+- Promiscuous (lacking judgement) network interfaces reads / records all packets passing by
+(Software tools such as WireShark allow for packet sniffing)
+
+IP Spoofing: Injection of packet with false source destination (Using a fake "Sender" to trick the receiver)
+
+DOS (Denial Of Service): Makes resources unavailable to legitimate traffic by overwhelming resource with false traffic
+
+Line Of Defense
+---------------
+
+Authentification: Proving who you say you are (Using passwords, 2FA, Sim cards, etc.)
+Confidentiality: Encryption (Digital Signatures)
+Integrity Checks: Access Controls (specific people get specific permissions) as well as Digital Signatures
+Access Restrictions: Password-Protected VPNS
+Firewalls: Allows and blocks incoming and outcoming traffic.
